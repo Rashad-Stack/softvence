@@ -12,9 +12,14 @@ const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
 
 export async function getCoachingStream({ message }: { message: string }) {
-  const response = await ai.models.generateContent({
-    model: "gemini-2.0-flash-001",
-    contents: message,
-  });
-  return response.text;
+  try {
+    const response = await ai.models.generateContent({
+      model: "gemini-2.0-flash-001",
+      contents: message,
+    });
+    return response.text;
+  } catch (error) {
+    console.error("Error in getCoachingStream:", error);
+    return "An error occurred while processing your request.";
+  }
 }

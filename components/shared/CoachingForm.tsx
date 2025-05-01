@@ -33,8 +33,10 @@ const formSchema = z.object({
 
 export default function CoachingForm({
   setMessages,
+  setIsLoading,
 }: {
   setMessages: Dispatch<SetStateAction<IMessages[]>>;
+  setIsLoading: Dispatch<SetStateAction<boolean>>;
 }) {
   // 1. Define your form.
   const form = useForm<z.infer<typeof formSchema>>({
@@ -47,6 +49,7 @@ export default function CoachingForm({
   // 2. Define a submit handler.
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
+      setIsLoading(true);
       // TODO: Handle the streaming response and update messages state
       // For now, just logging the action call
 
@@ -58,7 +61,7 @@ export default function CoachingForm({
           ai: false,
         },
       ]);
-
+      form.reset();
       const response = await getCoachingStream({ message: values.message }); // You'll need to adapt this to
       setMessages((prevMessages) => [
         ...prevMessages,
@@ -68,9 +71,10 @@ export default function CoachingForm({
           ai: true,
         },
       ]);
-      form.reset();
     } catch (error) {
       console.error("Error in onSubmit:", error);
+    } finally {
+      setIsLoading(false);
     }
   }
 

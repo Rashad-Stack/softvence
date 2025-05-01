@@ -1,7 +1,9 @@
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { cn } from "@/lib/utils";
 import clsx from "clsx";
-import ReactMarkdown from "react-markdown"; // Import the library
+import Markdown from "react-markdown"; // Import the library
+import remarkGfm from "remark-gfm";
 
 type IMessage = {
   picture: string;
@@ -22,10 +24,14 @@ export default function Message({ picture, message, ai }: IMessage) {
         <AvatarFallback>CN</AvatarFallback>
       </Avatar>
 
-      <Alert>
-        <AlertDescription className={clsx(ai ? "" : "text-right")}>
+      <Alert className={cn(ai ? "" : "text-right", "w-fit")}>
+        <AlertDescription>
           {/* Use ReactMarkdown to render the message content */}
-          <ReactMarkdown>{message}</ReactMarkdown>
+          {message && (
+            <Markdown remarkPlugins={[[remarkGfm, { singleTilde: false }]]}>
+              {message}
+            </Markdown>
+          )}
         </AlertDescription>
       </Alert>
     </div>
