@@ -12,7 +12,10 @@ type IMessage = {
 export default function Message({ picture, message, ai }: IMessage) {
   return (
     <div
-      className={clsx("flex items-start gap-4", ai ? "" : "flex-row-reverse")}
+      className={clsx(
+        "flex w-full items-start gap-4",
+        ai ? "" : "flex-row-reverse",
+      )}
     >
       <Avatar>
         <AvatarImage src={picture} />

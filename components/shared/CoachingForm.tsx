@@ -76,7 +76,7 @@ export default function CoachingForm({
 
   return (
     <>
-      <div className="flex gap-3">
+      <div className="flex flex-wrap gap-3">
         <Badge
           variant="secondary"
           className="cursor-pointer text-xs text-[#002868]"
