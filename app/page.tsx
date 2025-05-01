@@ -2,6 +2,7 @@ import Header from "@/components/shared/Header";
 import Hero from "@/components/shared/Hero";
 import LiveAICoach from "@/components/shared/LiveAICoach";
 import MobileNav from "@/components/shared/MobileNav";
+import OurCourses from "@/components/shared/OurCourses";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
@@ -32,6 +33,7 @@ export default function Home() {
         </div>
       </header>
       <LiveAICoach />
+      <OurCourses />
     </main>
   );
 }
