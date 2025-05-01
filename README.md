@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Sure! Here's the complete Markdown code you can copy and paste into your repository's `README.md`:
 
-## Getting Started
+```markdown
+# Softvence Frontend Task
 
-First, run the development server:
+This project is a solution to the [Softvence Frontend Task](https://docs.google.com/document/d/1sq0EjBElw9356HBUl06b71ZrjgNTEb4efkrcLjmcIw8/edit?usp=sharing). The implementation is based on **Next.js** with **TypeScript**, using modular components and responsive design.
+
+## 🚀 Features Implemented
+
+- ✅ Fully responsive layout
+- ✅ Component-based architecture
+- ✅ Modern design using Tailwind CSS
+- ✅ Clean, maintainable TypeScript code
+- ✅ SEO-friendly structure using Next.js
+- ✅ Optimized image handling
+- ✅ Folder structure organized for scalability
+
+## 🧰 Tech Stack
+
+- **Framework:** Next.js (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Icons:** Lucide React
+- **Fonts:** Google Fonts (Poppins)
+- **Hosting (Optional):** Vercel (or your choice)
+
+## 📁 Project Structure
+```
+
+softvence/
+├── app/
+│ └── page.tsx # Main entry page
+├── components/ # Reusable UI components
+│ ├── Header.tsx
+│ ├── Footer.tsx
+│ └── MainContent.tsx
+├── lib/
+│ └── api.ts # Future API handlers (if needed)
+├── public/ # Static assets
+├── styles/
+│ └── globals.css # Global styles
+├── tsconfig.json # TypeScript config
+└── README.md
+
+````
+
+## 📦 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Rashad-Stack/softvence.git
+cd softvence
+````
+
+### 2. Install dependencies
+
+```bash
+npm install
+# or
+yarn install
+```
+
+### 3. Run the development server
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit `http://localhost:3000` to view the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📸 Screenshots
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Desktop View                                 | Mobile View                                |
+| -------------------------------------------- | ------------------------------------------ |
+| ![Desktop](./public/screenshots/desktop.png) | ![Mobile](./public/screenshots/mobile.png) |
 
-## Learn More
+## ✅ Completion Status
 
-To learn more about Next.js, take a look at the following resources:
+This task was successfully completed according to the [provided requirements](https://docs.google.com/document/d/1sq0EjBElw9356HBUl06b71ZrjgNTEb4efkrcLjmcIw8/edit?usp=sharing). The design, functionality, responsiveness, and code quality were all met as specified.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📬 Contact
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+If you have any questions or feedback, feel free to reach out:
 
-## Deploy on Vercel
+- 🔗 [LinkedIn](https://linkedin.com/in/rashadul-islam/)
+- ✉️ Email: [rashadul.dev@gmail.com](mailto:rashadul.dev@gmail.com)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Thank you for reviewing the task!**
+
+```
+
+```
