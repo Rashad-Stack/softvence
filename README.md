@@ -1,5 +1,3 @@
-Sure! Here's the complete Markdown code you can copy and paste into your repository's `README.md`:
-
 ```markdown
 # Softvence Frontend Task
 
