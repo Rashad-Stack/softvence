@@ -1,7 +1,27 @@
-import { Badge } from "../ui/badge";
+"use client";
+import { useEffect, useRef, useState } from "react";
 import CoachingForm from "./CoachingForm";
+import Message from "./Message";
+
+interface IMessages {
+  picture: string;
+  message: string;
+  ai: boolean;
+}
 
 export default function LiveAICoach() {
+  const [messages, setMessages] = useState<IMessages[]>([]);
+  const messagesEndRef = useRef<HTMLDivElement>(null); // Ref for the container
+
+  // Function to scroll to the bottom
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  // useEffect to scroll when messages change
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]); // Dependency array includes messages
   return (
     <section className="bg-gradient-to-r from-[#0f3572] to-[#014fcd]">
       <div className="container mx-auto max-w-7xl py-6">
@@ -12,23 +32,21 @@ export default function LiveAICoach() {
             <div className="rounded-t-lg bg-[#fefeff] px-2 py-4">
               <h1 className="text-lg font-bold">AI Sales Coach</h1>
             </div>
-            <div className="h-96 overflow-y-auto bg-[#f2f3f3]"></div>
+            {/* Scrollable container */}
+            <div className="h-96 space-y-5 overflow-y-auto bg-[#f2f3f3] px-4 py-3">
+              <Message
+                message="Hello! I'm your AI sales coach. How can I help you improve your sales performance today?"
+                picture="https://github.com/shadcn.png"
+                ai={true}
+              />
+              {messages.map((message, index) => (
+                <Message key={index} {...message} />
+              ))}
+              {/* Empty div at the end to target for scrolling */}
+              <div ref={messagesEndRef} />
+            </div>
             <div className="rounded-b-lg bg-[#fefeff] px-2 py-4">
-              <div className="flex gap-3">
-                <Badge variant="secondary" className="text-xs text-[#002868]">
-                  How do I handle objections?
-                </Badge>
-                <Badge variant="secondary" className="text-xs text-[#002868]">
-                  Give me a cold email templat
-                </Badge>
-                <Badge variant="secondary" className="text-xs text-[#002868]">
-                  Closing techniques
-                </Badge>
-                <Badge variant="secondary" className="text-xs text-[#002868]">
-                  Negotiation tips
-                </Badge>
-              </div>
-              <CoachingForm />
+              <CoachingForm setMessages={setMessages} />
             </div>
           </div>
           <div className="flex flex-1 items-center justify-between gap-4">
