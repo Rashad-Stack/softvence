@@ -11,7 +11,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main>
+    <>
       <header className="flex w-full items-center justify-between bg-gradient-to-tl from-white from-40% via-[#004FCE]/10 via-70% to-[#004FCE]/20 to-100% px-4 py-4 backdrop-blur-lg">
         <div className="container mx-auto max-w-7xl">
           <nav className="flex items-center justify-between">
@@ -35,11 +35,13 @@ export default function Home() {
           <Hero />
         </div>
       </header>
-      <LiveAICoach />
-      <OurCourses />
-      <FAQ />
-      <Feedback />
+      <main>
+        <LiveAICoach />
+        <OurCourses />
+        <FAQ />
+        <Feedback />
+      </main>
       <Footer />
-    </main>
+    </>
   );
 }

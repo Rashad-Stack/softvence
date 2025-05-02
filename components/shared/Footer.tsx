@@ -17,11 +17,11 @@ export default function Footer() {
       <div className="container mx-auto max-w-7xl max-lg:px-4">
         <div className="relative py-10">
           {/* Background image */}
-          <div className="absolute inset-0 bg-[url('/Background-Noise.png')] bg-cover bg-center opacity-40"></div>
+          {/* <div className="absolute inset-0 bg-[url('/Background-Noise.png')] bg-cover bg-center opacity-40"></div> */}
 
           {/* Ready to Hire content with blur */}
           <div className="relative z-10 backdrop-blur-lg">
-            <div className="mx-auto mt-8 mb-14 flex w-11/12 flex-col items-center justify-center rounded-lg bg-gradient-to-r from-[#103570] to-[#004FCE] py-14">
+            <div className="mx-auto mt-8 mb-14 flex flex-col items-center justify-center rounded-lg bg-gradient-to-r from-[#103570] to-[#004FCE] py-14">
               <div className="text text-center">
                 <h2 className="pb-4 text-2xl font-semibold text-white">
                   Ready to Hire Smarter?
@@ -36,7 +36,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="mx-auto grid w-11/12 grid-cols-1 gap-8 border-b pb-4 md:grid-cols-2">
+          <div className="mx-auto grid grid-cols-1 gap-8 border-b pb-4 md:grid-cols-2">
             {/* Left site  */}
             <div className="flex flex-col md:w-[95%]">
               <div className="flex items-center space-x-1">
