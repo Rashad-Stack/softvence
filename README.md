@@ -84,7 +84,7 @@ This task was successfully completed according to the [provided requirements](ht
 If you have any questions or feedback, feel free to reach out:
 
 - 🔗 [LinkedIn](https://linkedin.com/in/rashadul-islam/)
-- ✉️ Email: [rashastack@gmail.com](mailto:rashadstack@gmail.com)
+- ✉️ Email: [rashadstack@gmail.com](mailto:rashadstack@gmail.com)
 
 ---
 
